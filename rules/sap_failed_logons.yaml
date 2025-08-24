@@ -1,0 +1,12 @@
+id: SAP-FAIL-LOGON-BURST
+title: SAP failed logon burst by user within 15m
+type: threshold
+severity: medium
+threshold:
+  where:
+    - { field: product, op: equals, value: sap }
+    - { field: event, op: equals, value: LOGON }
+    - { field: result, op: equals, value: FAIL }
+  group_by: [user]
+  window_minutes: 15
+  count_gte: 5

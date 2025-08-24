@@ -1,0 +1,3 @@
+timestamp,product,category,event,result,user,source_ip,tcode,details
+2025-01-15T14:00:00Z,linux,auth,sudo,SUCCESS,root,10.0.0.10,,add to sudoers: user bob
+2025-01-15T14:05:00Z,linux,auth,sudo,FAIL,bob,10.0.0.10,,invalid password

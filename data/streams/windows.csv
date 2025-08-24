@@ -1,0 +1,7 @@
+timestamp,product,category,event,result,user,source_ip,tcode,details
+2025-01-15T12:00:00Z,windows,auth,LOGON,FAIL,ALICE,203.0.113.5,,type=10 RemoteInteractive
+2025-01-15T12:02:00Z,windows,auth,LOGON,FAIL,ALICE,203.0.113.5,,type=10 RemoteInteractive
+2025-01-15T12:04:00Z,windows,auth,LOGON,FAIL,ALICE,203.0.113.5,,type=10 RemoteInteractive
+2025-01-15T12:06:00Z,windows,auth,LOGON,FAIL,ALICE,203.0.113.5,,type=10 RemoteInteractive
+2025-01-15T12:08:00Z,windows,auth,LOGON,FAIL,ALICE,203.0.113.5,,type=10 RemoteInteractive
+2025-01-15T12:10:00Z,windows,auth,LOGON,FAIL,ALICE,203.0.113.5,,type=10 RemoteInteractive

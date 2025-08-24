@@ -1,0 +1,10 @@
+id: LNX-SUDO-PRIV
+title: Linux sudo action modifying privileged access
+type: match
+severity: medium
+match:
+  where:
+    - { field: product, op: equals, value: linux }
+    - { field: event, op: equals, value: sudo }
+    - { field: result, op: equals, value: SUCCESS }
+    - { field: details, op: contains, value: "add to sudoers" }

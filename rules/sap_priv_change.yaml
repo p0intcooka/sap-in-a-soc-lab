@@ -1,0 +1,9 @@
+id: SAP-PRIV-CHANGE
+title: SAP privilege/admin change event
+type: match
+severity: high
+match:
+  where:
+    - { field: product, op: equals, value: sap }
+    - { field: event, op: in, value: [USER_MAINT, ROLE_CHANGE, PROFILE_ASSIGN] }
+    - { field: result, op: equals, value: SUCCESS }

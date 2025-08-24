@@ -1,0 +1,13 @@
+id: WIN-REMOTE-BRUTE
+title: Windows remote logon (type 10) brute-force by user+IP within 15m
+type: threshold
+severity: medium
+threshold:
+  where:
+    - { field: product, op: equals, value: windows }
+    - { field: event, op: equals, value: LOGON }
+    - { field: result, op: equals, value: FAIL }
+    - { field: details, op: contains, value: "type=10" }
+  group_by: [user, source_ip]
+  window_minutes: 15
+  count_gte: 5

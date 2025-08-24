@@ -1,0 +1,9 @@
+id: SAP-RFC-ANOM
+title: SAP RFC call from unusual source
+type: match
+severity: high
+match:
+  where:
+    - { field: product, op: equals, value: sap }
+    - { field: event, op: equals, value: RFC_CALL }
+    - { field: source_ip, op: not_startswith_any, value: ["10.", "192.168.", "172.16."] }
